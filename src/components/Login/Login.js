@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Card, Form, Button, Container } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
-import app from '../firebase/firebase';
+import app from '../firebase';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Login() {

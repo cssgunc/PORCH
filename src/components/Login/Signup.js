@@ -3,8 +3,9 @@ import { collection, doc, getFirestore, setDoc } from '@firebase/firestore';
 import React, { useState } from 'react'
 import { Card, Form, Button, Container } from 'react-bootstrap';
 import { useHistory } from 'react-router';
-import app from '../firebase/firebase';
+import app from '../firebase';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 export default function Signup() {
     const [email, setEmail] = useState("");
@@ -87,11 +88,14 @@ export default function Signup() {
                             </Form.Group>
                             <Form.Group id="neighborhood">
                                 <Form.Label>Neighborhood </Form.Label>
-                                <Form.Control type="neighborhood" onChange={updateNeighborhood} placeholder="Enter neighboorhood" required></Form.Control>
+                                <Form.Control type="neighborhood" onChange={updateNeighborhood} placeholder="Enter neighborhood" required></Form.Control>
                             </Form.Group>
                             &nbsp;
                             <Button className="w-100" type="submit" onClick={handleSignup}>Create Account</Button>
-                        </Form> 
+                        </Form>
+                        <div className='d-flex align-items-center justify-content-center'>
+                            Already have an account? <Link to="/login">Login</Link>
+                        </div> 
                     </Card.Body>
                 </Card>
             </div>
