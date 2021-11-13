@@ -1,0 +1,28 @@
+.volunteer-dashboard-container {
+    background-color: #FBFAF6;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+.volunteer-dashboard-main-content {
+    padding: 27px;
+}
+
+.volunteer-dashboard-main-tile {
+    display: block;
+    background-color: #F1EBD9;
+    border-radius: 10px;
+    padding: 13px;
+    margin-top: 17px;
+}
+
+.volunteer-dashbaord-title {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 17px;
+}
+
+.volunteer-dashboard-name {
+    font-weight: 600;
+    font-size: 22px;
+}
