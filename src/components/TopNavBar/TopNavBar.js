@@ -14,7 +14,7 @@ const App = () => {
 
     return (
         <div id="mainNavBar">
-            <img src={logo} alt="Porch Logo" id="headerLogo"/>
+            <a href="../Home"><img src={logo} alt="Porch Logo" id="headerLogo"/></a>
             <div id="mobileMenu" className="navMenu" >
                 <div id="hamburgerMenu" onClick={toggleHamburger}>
                     { hamburgerOpen ? <Hamburger /> : <NavContent /> }

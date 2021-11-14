@@ -41,7 +41,7 @@
     padding: 7px;
     color: black;
     display: inline-block;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .navItemLink {
@@ -92,4 +92,5 @@
 #hamButton {
     float: right;
     padding: 5px 5px 0px 5px;
+    cursor: pointer;
 }
