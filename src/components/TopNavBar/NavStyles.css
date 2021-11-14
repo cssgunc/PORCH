@@ -11,7 +11,7 @@
     margin-left: 18px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 739px) {
     #desktopMenu {
         display: none;
     }
@@ -25,12 +25,12 @@
     }
 }
 
-@media only screen and (min-width: 701px) {
+@media only screen and (min-width: 740px) {
     #desktopMenu {
         display: inline-block;
         position: absolute;
         top: 34%;
-        right: 18px;
+        right: 3%;
     }
     #mobileMenu {
         display: none;
@@ -59,6 +59,7 @@
     background-color: #A9B638;
     border-radius: 22px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .burger {
@@ -75,22 +76,33 @@
 
 #hamBox {
     height: 80%;
-    width: 175px;
+    width: 190px;
     background-color: #A9B638;
     border-radius: 10px;
 }
 
 #hamNavList {
     list-style-type: none;
-    text-align: right;
+    text-align: left;
+    padding-left: 10px;
+    width: 150px;
+    height: 275px;
+}
+
+#hamNavList li {
+    color: white;
+    border-bottom: 2px solid white;
+    border-radius: 2px;
+    width: 140px;
+    margin-bottom: 10px;
 }
 
 .hamNavItem {
-    padding: 10px 15px 10px 0px;
+    padding: 10px 15px 10px 0;
 }
 
 #hamButton {
     float: right;
-    padding: 5px 5px 0px 5px;
+    padding: 5px 5px 0 5px;
     cursor: pointer;
 }

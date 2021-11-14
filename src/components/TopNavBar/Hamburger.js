@@ -9,6 +9,5 @@ export default function Hamburger() {
                     <div className="burger"/>
                     <div className="burger"/>
             </div>
-
     )
 }
