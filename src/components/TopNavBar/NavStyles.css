@@ -1,0 +1,108 @@
+#mainNavBar {
+    background-color: antiquewhite;
+    height: 150px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+    position: relative;
+}
+#headerLogo {
+    height: 145px;
+    margin-left: 18px;
+}
+
+@media only screen and (max-width: 739px) {
+    #desktopMenu {
+        display: none;
+    }
+
+    #mobileMenu {
+        display: inline-block;
+        position: absolute;
+        top: 34%;
+        right: 4%;
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 740px) {
+    #desktopMenu {
+        display: inline-block;
+        position: absolute;
+        top: 34%;
+        right: 3%;
+    }
+    #mobileMenu {
+        display: none;
+    }
+}
+
+.navItem {
+    padding: 7px;
+    color: black;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.navItemLink {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hamburger {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    z-index: 10;
+    background-color: #A9B638;
+    border-radius: 22px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.burger {
+    height: 4px;
+    border-radius: 3px;
+    background-color: white;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+}
+
+#hamburgerMenu {
+    float: right;
+}
+
+#hamBox {
+    height: 80%;
+    width: 190px;
+    background-color: #A9B638;
+    border-radius: 10px;
+}
+
+#hamNavList {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 10px;
+    width: 150px;
+    height: 275px;
+}
+
+#hamNavList li {
+    color: white;
+    border-bottom: 2px solid white;
+    border-radius: 2px;
+    width: 140px;
+    margin-bottom: 10px;
+}
+
+.hamNavItem {
+    padding: 10px 15px 10px 0;
+}
+
+#hamButton {
+    float: right;
+    padding: 5px 5px 0 5px;
+    cursor: pointer;
+}

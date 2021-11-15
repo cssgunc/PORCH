@@ -5,6 +5,7 @@ import { Card, Form, Button, Container } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 import app from '../../firebase/firebase';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../Login/Login.css';
 import { Link } from 'react-router-dom';
 
 export default function Signup() {
@@ -59,7 +60,7 @@ export default function Signup() {
             style={{ minHeight: "100vh" }}
         >
             <div className="w-100" style={{ maxWidth: "500px"}}>
-                <Card>
+                <Card id='login'>
                     <Card.Body>
                         <h2 className="text-center mb-4">Create Account</h2>
                         <Form>
@@ -91,8 +92,10 @@ export default function Signup() {
                                 <Form.Control type="neighborhood" onChange={updateNeighborhood} placeholder="Enter neighborhood" required></Form.Control>
                             </Form.Group>
                             &nbsp;
-                            <Button className="w-100" type="submit" onClick={handleSignup}>Create Account</Button>
+                            <Button className="w-100" type="submit" id='button' onClick={handleSignup}>Create Account</Button>
                         </Form>
+
+                        &nbsp;
                         <div className='d-flex align-items-center justify-content-center'>
                             Already have an account?&nbsp;<Link to="/login">Login</Link>
                         </div> 

@@ -1,0 +1,52 @@
+#donation {
+    background-color: #F1EBD9;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+}
+
+.donationTextItem {
+    padding: 0;
+    margin: 0 0 5px 0;
+}
+
+#donationText {
+    display: inline-block;
+}
+
+#donationName {
+    font-size: large;
+    font-weight: 600;
+}
+
+#donationMemberType, #donationCommunity {
+    color: #8E6842;
+}
+
+#donationNeighborhood {
+    margin-top: 20px;
+    font-weight: 600;
+}
+#donationEditField {
+    display: inline-block;
+    float: right;
+    margin-top: 90px;
+    margin-right: 3px;
+}
+#donationEdit {
+    width: 15px;
+    pointer-events: all;
+    cursor: pointer;
+}
+#donorTitle {
+    font-weight: 600;
+    font-size: larger;
+    margin: 20px 0 10px 5%;
+}
+
+#newDonate {
+    margin: 10px 5%;
+    width: 90%;
+}

@@ -6,6 +6,7 @@ import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import app from '../../firebase/firebase';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../Login/Login.css';
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -43,7 +44,7 @@ export default function Login() {
             style={{ minHeight: "100vh" }}
         >
             <div className="w-100" style={{ maxWidth: "500px"}}>
-                <Card>
+                <Card id='login'>
                     <Card.Body>
                         <h2 className="text-center mb-4">Sign In</h2>
                         <Form>
@@ -57,7 +58,7 @@ export default function Login() {
                                 <Form.Control type="password" onChange={updatePassword} placeholder="Enter password" required></Form.Control>
                             </Form.Group>
                             &nbsp;
-                            <Button className="w-100" type="submit" onClick={handleLogin}>Login</Button>
+                            <Button className="w-100" type="submit" id='button' onClick={handleLogin}>Login</Button>
                         </Form>
                         &nbsp;
                         <div className='d-flex align-items-center justify-content-center'>
