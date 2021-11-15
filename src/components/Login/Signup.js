@@ -3,7 +3,7 @@ import { collection, doc, getFirestore, setDoc } from '@firebase/firestore';
 import React, { useState } from 'react'
 import { Card, Form, Button, Container } from 'react-bootstrap';
 import { useHistory } from 'react-router';
-import app from '../firebase';
+import app from '../../firebase/firebase';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
@@ -44,7 +44,7 @@ export default function Signup() {
                     name: name, role: role, community: community, neighborhood: neighborhood
                 }))
             (role === "Volunteer") ?
-            history.push('/') : history.push('/home');
+            history.push('/') : history.push('/home'); //Change when get routes for different users
         })
         .catch((error) => {
             console.log(error.code);
@@ -94,7 +94,7 @@ export default function Signup() {
                             <Button className="w-100" type="submit" onClick={handleSignup}>Create Account</Button>
                         </Form>
                         <div className='d-flex align-items-center justify-content-center'>
-                            Already have an account? <Link to="/login">Login</Link>
+                            Already have an account?&nbsp;<Link to="/login">Login</Link>
                         </div> 
                     </Card.Body>
                 </Card>

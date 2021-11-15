@@ -1,9 +1,9 @@
 import './App.css';
 import React from 'react';
 import { Route, Switch } from 'react-router';
-import Login from './components/Login/Login';
 
-import HomeComponent from './components/Home/Home'
+import HomeComponent from './components/Home/Home';
+import Login from './components/Login/Login';
 import Signup from './components/Login/Signup';
 
 function App() {

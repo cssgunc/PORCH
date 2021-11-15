@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Card, Form, Button, Container } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
-import app from '../firebase';
+import app from '../../firebase/firebase';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Login() {
@@ -28,7 +28,7 @@ export default function Login() {
             getDoc(docRef)
             .then((snapshot) => {
                 (snapshot.get("role") === "Volunteer") ? 
-                history.push('/') : history.push('/home')
+                history.push('/') : history.push('/home'); //Change when get routes for different users
             })
         })
         .catch((error) => {
@@ -48,12 +48,12 @@ export default function Login() {
                         <h2 className="text-center mb-4">Sign In</h2>
                         <Form>
                             <Form.Group id="email">
-                                <Form.Label>Email </Form.Label>
+                                <Form.Label>Email</Form.Label>
                                 <Form.Control type="email" onChange={updateEmail} placeholder="Enter email" required></Form.Control>
                             </Form.Group>
                             &nbsp;
                             <Form.Group id="password">
-                                <Form.Label>Password </Form.Label>
+                                <Form.Label>Password</Form.Label>
                                 <Form.Control type="password" onChange={updatePassword} placeholder="Enter password" required></Form.Control>
                             </Form.Group>
                             &nbsp;
@@ -61,7 +61,7 @@ export default function Login() {
                         </Form>
                         &nbsp;
                         <div className='d-flex align-items-center justify-content-center'>
-                            Need an account? <Link to="/signup">Create Account</Link>
+                            Need an account?&nbsp;<Link to="/signup">Create Account</Link>
                         </div>
                     </Card.Body>
                 </Card>
