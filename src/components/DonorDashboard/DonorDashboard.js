@@ -1,7 +1,7 @@
 import React from 'react';
 import TopNavBar from "../TopNavBar/TopNavBar";
 import Donation from "./Donation";
-import Button from "../Button";
+import Button from "../Button/Button";
 import donate from "./donate.svg";
 
 const App = () => {
@@ -11,10 +11,11 @@ const App = () => {
             <p id="donorTitle">Dashboard</p>
             <div id="donationContainer"> <Donation /> <Donation /> </div>
             <div>
-                <Button id="newDonate"
+                <Button id="bigButton"
                         text="Donate"
                         icon={donate}
-                        func={function() {}}/>
+                        href={"./Home"}
+                />
             </div>
         </div>
     );
