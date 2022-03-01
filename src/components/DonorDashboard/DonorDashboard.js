@@ -14,7 +14,7 @@ const App = () => {
                 <Button id="newDonate"
                         text="Donate"
                         icon={donate}
-                        func={function() {window.open("https://www.youtube.com/channel/UChAnqc_AY5_I3Px5dig3X1Q")}}/>
+                        func={function() {}}/>
             </div>
         </div>
     );
