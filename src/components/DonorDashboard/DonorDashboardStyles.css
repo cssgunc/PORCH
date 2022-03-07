@@ -50,3 +50,18 @@
     margin: 10px 5%;
     width: 90%;
 }
+
+#pickDate {
+    font-weight: 500;
+}
+
+#newDonationContainer {
+    margin: 20px 0 10px 5%;
+}
+#pickUpDate {
+    margin-top: 10px;
+}
+#submitNewDonate {
+    margin-top: 20px;
+    width: 100px;
+}
