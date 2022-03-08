@@ -21,11 +21,11 @@
     font-weight: 600;
 }
 
-#volunteerMemberType {
+#volunteerMemberType, #volunteerCommunity {
     color: #8E6842;
 }
 
-#volunteerCommunity, #volunteerNeighborhood {
+#volunteerNeighborhood {
     margin-top: 10px;
     font-weight: 600;
 }
