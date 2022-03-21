@@ -2,7 +2,9 @@ import React from 'react';
 
 const App = () => {
     return (
-        <div>Home</div>
+        <div>
+            Home
+        </div>
     );
 }
 
