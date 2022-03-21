@@ -1,0 +1,43 @@
+#steps {
+    background-color: #F1EBD9;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+}
+
+#stepsText {
+    display: inline-block;
+}
+
+#stepsName {
+    font-size: large;
+    font-weight: 600;
+}
+
+.stepsTextItem {
+    padding: 0;
+    margin: 0 0 2px 0;
+}
+
+#stepsInstruction {
+    font-size: medium;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+#logsTitle {
+    font-weight: 600;
+    font-size: larger;
+    margin: 20px 0 10px 5%;
+}
+
+#dropMenu {
+    width: 90%;
+    margin: 20px 0 10px 5%;
+}
+
+#startButton {
+    margin: 20px 0 10px 5%;
+}
