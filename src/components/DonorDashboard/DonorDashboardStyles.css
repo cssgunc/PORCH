@@ -31,7 +31,7 @@
 }
 #donationEditField {
     display: inline-block;
-    float: right;
+    /**float: right;*/
     margin-top: 90px;
     margin-right: 3px;
 }
