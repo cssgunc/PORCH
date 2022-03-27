@@ -7,6 +7,7 @@ import DonorDashboard from "./components/DonorDashboard/DonorDashboard";
 import Login from './components/Login/Login';
 import Signup from './components/Login/Signup';
 import VolunteerDashboard from './components/VolunteerDashboard/VolunteerDashboard';
+import Settings from './components/Settings/Settings';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/volunteerDashboard" component={VolunteerDashboard} exact />
+          <Route path="/settings" component={Settings} exact />
       </Switch>
     </main>
   );

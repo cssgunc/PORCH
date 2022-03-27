@@ -8,7 +8,7 @@ const App = () => {
             <TopNavBar />
             <p id="donorTitle">Dashboard</p>
             <div id="donationContainer"> <Donation /> </div>
-            <button id="newDonate"> temp Donate Button</button>
+            <button id="newDonate">temp Donate Button</button>
         </div>
     );
 }

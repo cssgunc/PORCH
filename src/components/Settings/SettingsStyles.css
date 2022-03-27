@@ -1,0 +1,27 @@
+#settingsTitle {
+    font-weight: 600;
+    font-size: larger;
+    margin: 20px 0 10px 5%;
+}
+
+#settingsContainer {
+    background-color: #F1EBD9;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+}
+
+.settingsLabel {
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.settingsInput {
+    margin-bottom: 5px;
+}
+#buttonContainer {
+    width: 140px;
+    margin: 0 auto;
+}
