@@ -33,11 +33,14 @@
     margin: 20px 0 10px 5%;
 }
 
-#dropMenu {
-    width: 90%;
+#dateContainer {
     margin: 20px 0 10px 5%;
 }
 
 #startButton {
     margin: 20px 0 10px 5%;
+}
+
+#pickUpDate {
+    width: 95%;
 }
