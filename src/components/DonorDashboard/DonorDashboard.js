@@ -1,6 +1,8 @@
 import React from 'react';
 import TopNavBar from "../TopNavBar/TopNavBar";
 import Donation from "./Donation";
+import Button from "../Button/Button";
+import donate from "./donate.svg";
 
 const App = () => {
     return (
@@ -8,7 +10,13 @@ const App = () => {
             <TopNavBar />
             <p id="donorTitle">Dashboard</p>
             <div id="donationContainer"> <Donation /> <Donation /> </div>
-            <button id="newDonate"> temp Donate Button</button>
+            <div>
+                <Button id="bigButton"
+                        text="Donate"
+                        icon={donate}
+                        href={"./Home"}
+                />
+            </div>
         </div>
     );
 }
