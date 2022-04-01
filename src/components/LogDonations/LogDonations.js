@@ -6,6 +6,8 @@ import { doc, getDoc, getFirestore } from '@firebase/firestore';
 import app from '../../firebase/firebase';
 import "./LogDonationsStyles.css"
 import pencil from "./pencil.svg";
+import donate from "../DonorDashboard/donate.svg";
+import Button from "../Button/Button";
 
 const App = () => {
 
@@ -43,20 +45,20 @@ const App = () => {
             <TopNavBar />
             {show ? 
             <div>
-                <p id="logsTitle"> Log Donations </p>
+                <p id="logsName"> Log Donations </p>
                 <p id="logsTitle"> Donor's Address </p>
                 <div>
-                    <form id="address_dropdown" onChange={() => setDonorAddress()}>   
-                        <select>  
-                        <option value = "Select"> Select...   
-                        </option>  
-                        <option value = "Option1"> Option1 
-                        </option>  
-                        <option value = "Option2"> Option2 
-                        </option>  
-                        <option value = "Option3"> Option3 
-                        </option>  
-                        </select>  
+                    <form onChange={() => setDonorAddress()}>
+                        <select id="address_dropdown">
+                        <option value = "Select"> Select...
+                        </option>
+                        <option value = "Option1"> Option1
+                        </option>
+                        <option value = "Option2"> Option2
+                        </option>
+                        <option value = "Option3"> Option3
+                        </option>
+                        </select>
                     </form>
                 </div>
                 <p id="logsTitle"> Donations </p>
@@ -65,8 +67,8 @@ const App = () => {
                         <td>
                             <p id="logsSubtitle"> Amount </p>
                             <div>
-                                <form id="amount" onChange={() => setAmount()}>   
-                                    <select>  
+                                <form id="amount" onChange={() => setAmount()}>
+                                    <select id="sub_dropdown">
                                     <option value = "Select"> Select...   
                                     </option>  
                                     <option value = "Option1"> Option1 
@@ -82,8 +84,8 @@ const App = () => {
                         <td>
                             <p id="logsSubtitle"> Type </p>
                             <div>
-                                <form id="type" onChange={() => setType()}>   
-                                    <select>  
+                                <form id="type" onChange={() => setType()}>
+                                    <select id="sub_dropdown">
                                     <option value = "Select"> Select...   
                                     </option>  
                                     <option value = "Option1"> Option1 
@@ -98,8 +100,8 @@ const App = () => {
                         </td>
                     </tr>
                 </table>
-                
-                <button onClick={add}>Add</button>
+
+                <Button id={"smallButton"} text="Add" func={add}/>
                 <p id="logsTitle"> Just Added </p>
                 <div id="box">
                     <p id="address">300 Franklin St, Chapel Hill, NC 27514</p>
@@ -108,17 +110,21 @@ const App = () => {
                     <p id="amount">1 box</p>
                 </div>
                 <br></br>
-                <button id="submitButton" onClick={submit}>Submit</button>
+                <Button id={"smallButton"} text="Submit" func={submit}/>
             </div>
              : 
             <div>
                 <p id="logsTitle"> Log Donations </p>
                 <div id="stepsContainer"> <Steps /> </div>
                 <p id="logsTitle"> Select Pick-Up Date </p>
-                <input type="date" id="pick-up-date" name="pick-up-date" onChange={() => setDate()}></input>  
+                <input type="date" id="pick-up-date" name="pick-up-date" onChange={() => setDate()}/>
                 <br></br>
                 <br></br>
-                <button id="startButton" onClick={() => setShow(s => !s)}>Start</button>
+                <Button id="smallButton"
+                        text="Start"
+                        icon={donate}
+                        func={() => setShow(s => !s)}
+                />
             </div>}
 
         </div>
