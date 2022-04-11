@@ -98,9 +98,13 @@ input {
 }
 
 table {
-    margin-left: 5%;
     table-layout: fixed ;
-    width: 90%;
+    width: 100%;
+}
+
+td {
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 #address_dropdown {
@@ -110,9 +114,9 @@ table {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-#sub_dropdown {
+#sub_entry {
     height: 62px;
-    width: 80%;
+    width: 100%;
     border-radius: 5px;
 }
 

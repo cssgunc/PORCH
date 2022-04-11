@@ -68,16 +68,9 @@ const App = () => {
                             <p id="logsSubtitle"> Amount </p>
                             <div>
                                 <form id="amount" onChange={() => setAmount()}>
-                                    <select id="sub_dropdown">
-                                    <option value = "Select"> Select...   
-                                    </option>  
-                                    <option value = "Option1"> Option1 
-                                    </option>  
-                                    <option value = "Option2"> Option2 
-                                    </option>  
-                                    <option value = "Option3"> Option3 
-                                    </option>  
-                                    </select>  
+                                    <input type="number" min="0.00" max="10000.00" step="0.01" defaultValue="1.00" id="sub_entry">
+
+                                    </input>
                                 </form>
                             </div>
                         </td>
@@ -85,7 +78,7 @@ const App = () => {
                             <p id="logsSubtitle"> Type </p>
                             <div>
                                 <form id="type" onChange={() => setType()}>
-                                    <select id="sub_dropdown">
+                                    <select id="sub_entry">
                                     <option value = "Select"> Select...   
                                     </option>  
                                     <option value = "Option1"> Option1 
@@ -94,7 +87,7 @@ const App = () => {
                                     </option>  
                                     <option value = "Option3"> Option3 
                                     </option>  
-                                    </select>  
+                                    </select>
                                 </form>
                             </div>
                         </td>
