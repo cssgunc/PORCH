@@ -12,8 +12,10 @@
 }
 
 #stepsName {
-    font-size: large;
+    font-style: normal;
     font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
 }
 
 .stepsTextItem {
@@ -22,26 +24,36 @@
 }
 
 #stepsInstruction {
-    font-size: medium;
     margin-top: 10px;
-    font-weight: 600;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
 }
 
+#logsName {
+    margin: 20px 0 10px 5%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+
 #logsTitle {
+    margin: 20px 0 10px 5%;
+    font-style: normal;
     font-weight: 600;
     font-size: 22px;
-    margin: 20px 0 10px 5%;
 }
 
 #logsSubtitle {
+    font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    margin: 20px 0 10px 5%;
-    margin-right: 5rem;
 }
 
 form {
-    width: 90%;
+    width: 100%;
     margin: 20px 0 10px 5%;
 }
 
@@ -56,7 +68,7 @@ button {
 }
 
 #pick-up-date {
-    width: 90%; 
+    width: 90%;
     margin-left: 5%;
 }
 
@@ -87,4 +99,27 @@ input {
 
 table {
     margin-left: 5%;
+    table-layout: fixed ;
+    width: 90%;
+}
+
+#address_dropdown {
+    width: 90%;
+    height: 36px;
+    border-radius: 5px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#sub_dropdown {
+    height: 62px;
+    width: 80%;
+    border-radius: 5px;
+}
+
+#amount {
+    margin-left: 0;
+}
+
+#type {
+    margin-left: 0;
 }
