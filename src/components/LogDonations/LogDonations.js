@@ -80,25 +80,18 @@ const App = () => {
                         <td>
                             <p id="logsSubtitle"> Amount </p>
                             <div>
-                                <form name="amount" id="amount" onChange={updateInput}>
-                                    <select id="sub_dropdown">
-                                    <option value = "Select"> Select...   
-                                    </option>  
-                                    <option value = "Option1"> Option1 
-                                    </option>  
-                                    <option value = "Option2"> Option2 
-                                    </option>  
-                                    <option value = "Option3"> Option3 
-                                    </option>  
-                                    </select>  
+                                <form id="amount" onChange={updateInput}>
+                                    <input type="number" min="0.00" max="10000.00" step="0.01" defaultValue="1.00" id="sub_entry">
+
+                                    </input>
                                 </form>
                             </div>
                         </td>
                         <td>
                             <p id="logsSubtitle"> Type </p>
                             <div>
-                                <form id="type" name="type" onChange={updateInput}>
-                                    <select id="sub_dropdown">
+                                <form id="type" onChange={updateInput}>
+                                    <select id="sub_entry">
                                     <option value = "Select"> Select...   
                                     </option>  
                                     <option value = "Option1"> Option1 
@@ -107,7 +100,7 @@ const App = () => {
                                     </option>  
                                     <option value = "Option3"> Option3 
                                     </option>  
-                                    </select>  
+                                    </select>
                                 </form>
                             </div>
                         </td>
