@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Steps from "./Steps"
 import TopNavBar from "../TopNavBar/TopNavBar";
 import { getAuth } from '@firebase/auth';
-import { doc, getDoc, getFirestore } from '@firebase/firestore';
+import { getFirestore, collection, addDoc } from '@firebase/firestore';
 import app from '../../firebase/firebase';
 import "./LogDonationsStyles.css"
 import pencil from "./pencil.svg";
@@ -11,30 +11,42 @@ import Button from "../Button/Button";
 
 const App = () => {
 
+    const [formData, setFormData] = useState({});
     const [show, setShow] = useState(false);
 
-    const [date, setDate] = useState("");
-    const [donor_address, setDonorAddress] = useState("");
-    const [type, setType] = useState("");
-    const [amount, setAmount] = useState("");
+    const updateInput = e => {
+        setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+        })
+    }
+    const handleSubmit = async event => {
+        event.preventDefault()
+
+        const data = {
+            date: formData.date,
+            donor_address: formData.donor_address,
+            type: formData.type,
+            amount: formData.amount
+        };
+
+        try {
+            const docRef = await addDoc(collection(db, "donations"), data);
+            console.log("Document written with ID: ", docRef.id);
+          } catch (e) {
+            console.error("Error adding document: ", e);
+        }
+
+        setFormData({
+            date: '',
+            donor_address: '',
+            type: '',
+            amount: '',
+            })
+    }
 
     const auth = getAuth(app);
     const db = getFirestore(app);
-
-    async function submit() {
-        const data = {
-            date: date,
-            address: donor_address,
-            donation: [
-                {
-                    type: type,
-                    amont: amount
-                }
-            ]
-        };
-
-        const res = await db.collection('donations').add(data);
-    }
 
     function add() {
         
@@ -45,11 +57,12 @@ const App = () => {
             <TopNavBar />
             {show ? 
             <div>
+                <form onSubmit={handleSubmit}>
                 <p id="logsName"> Log Donations </p>
                 <p id="logsTitle"> Donor's Address </p>
                 <div>
-                    <form onChange={() => setDonorAddress()}>
-                        <select id="address_dropdown">
+                    <form>
+                        <select id="address_dropdown" name="donor_address" onChange={updateInput}>
                         <option value = "Select"> Select...
                         </option>
                         <option value = "Option1"> Option1
@@ -67,7 +80,7 @@ const App = () => {
                         <td>
                             <p id="logsSubtitle"> Amount </p>
                             <div>
-                                <form id="amount" onChange={() => setAmount()}>
+                                <form name="amount" id="amount" onChange={updateInput}>
                                     <select id="sub_dropdown">
                                     <option value = "Select"> Select...   
                                     </option>  
@@ -84,7 +97,7 @@ const App = () => {
                         <td>
                             <p id="logsSubtitle"> Type </p>
                             <div>
-                                <form id="type" onChange={() => setType()}>
+                                <form id="type" name="type" onChange={updateInput}>
                                     <select id="sub_dropdown">
                                     <option value = "Select"> Select...   
                                     </option>  
@@ -110,14 +123,15 @@ const App = () => {
                     <p id="amount">1 box</p>
                 </div>
                 <br></br>
-                <Button id={"smallButton"} text="Submit" func={submit}/>
+                <Button id={"smallButton"} text="Submit" type="submit"/>
+                </form>
             </div>
              : 
             <div>
                 <p id="logsTitle"> Log Donations </p>
                 <div id="stepsContainer"> <Steps /> </div>
                 <p id="logsTitle"> Select Pick-Up Date </p>
-                <input type="date" id="pick-up-date" name="pick-up-date" onChange={() => setDate()}/>
+                <input type="date" id="pick-up-date" name="date" onChange={updateInput}/>
                 <br></br>
                 <br></br>
                 <Button id="smallButton"
