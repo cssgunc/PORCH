@@ -58,8 +58,8 @@ const App = () => {
             {show ? 
             <div>
                 <form onSubmit={handleSubmit}>
-                <p id="logsName"> Log Donations </p>
-                <p id="logsTitle"> Donor's Address </p>
+                <p id="logsTitle"> Log Donations </p>
+                <p id="logsName"> Donor's Address </p>
                 <div>
                     <form>
                         <select id="address_dropdown" name="donor_address" onChange={updateInput}>
@@ -74,7 +74,7 @@ const App = () => {
                         </select>
                     </form>
                 </div>
-                <p id="logsTitle"> Donations </p>
+                <p id="logsName"> Donations </p>
                 <table>
                     <tr>
                         <td>
@@ -108,7 +108,7 @@ const App = () => {
                 </table>
 
                 <Button id={"smallButton"} text="Add" func={add}/>
-                <p id="logsTitle"> Just Added </p>
+                <p id="logsName"> Just Added </p>
                 <div id="box">
                     <p id="address">300 Franklin St, Chapel Hill, NC 27514</p>
                     <p id="amount">3 bags</p>
