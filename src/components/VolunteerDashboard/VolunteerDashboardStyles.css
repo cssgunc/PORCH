@@ -1,4 +1,4 @@
-#donation {
+#volunteer {
     background-color: #F1EBD9;
     width: 90%;
     padding: 10px;
@@ -7,58 +7,63 @@
     overflow: hidden;
 }
 
-.donationTextItem {
+.volunteerTextItem {
     padding: 0;
     margin: 0 0 5px 0;
 }
 
-#donationText {
+#volunteerText {
     display: inline-block;
 }
 
-#donationName {
+#volunteerName {
     font-size: large;
     font-weight: 600;
 }
 
-#donationMemberType, #donationCommunity {
+#volunteerMemberType, #volunteerCommunity {
     color: #8E6842;
 }
 
-#donationNeighborhood {
-    margin-top: 20px;
+#volunteerNeighborhood {
+    margin-top: 10px;
     font-weight: 600;
 }
-#donationEditField {
+
+#volunteerEditField {
     display: inline-block;
     /**float: right;*/
     margin-top: 90px;
     margin-right: 3px;
 }
-#donationEdit {
+
+#volunteerEdit {
     width: 15px;
     pointer-events: all;
     cursor: pointer;
 }
-#donorTitle {
+
+#volunteerTitle {
     font-weight: 600;
     font-size: larger;
     margin: 20px 0 10px 5%;
 }
 
-#newDonate {
-    margin: 10px 5%;
+#volunteerButtonContainer {
+    display: flex;
+    flex-direction: column;
     width: 90%;
-    height: 82px;
-    background: #A9B638;
-    border-style: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px;
     border-radius: 10px;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 26px;
-    letter-spacing: 0em;
-    text-align: left;
-    text-indent: 19px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+}
+
+#logDonationsButton, #sendReminderButton {
+    margin: 10px 5%;
+    background-color: #A9B638;
+    border-radius: 10px;
+    border-color: #A9B638;
+    box-shadow: 0px 4px 4px #b4b4b4;
+    padding: 2%;
 }
