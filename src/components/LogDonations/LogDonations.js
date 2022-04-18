@@ -11,7 +11,12 @@ import Button from "../Button/Button";
 
 const App = () => {
 
-    const [formData, setFormData] = useState({});
+    const [formData, setFormData] = useState({
+        date: "mm/dd/yyyy",
+        donor_address: "option1",
+        type: "option1",
+        amount: 1.00
+    });
     const [show, setShow] = useState(false);
 
     const updateInput = e => {
@@ -36,13 +41,6 @@ const App = () => {
           } catch (e) {
             console.error("Error adding document: ", e);
         }
-
-        setFormData({
-            date: '',
-            donor_address: '',
-            type: '',
-            amount: '',
-            })
     }
 
     const auth = getAuth(app);
@@ -81,8 +79,7 @@ const App = () => {
                             <p id="logsSubtitle"> Amount </p>
                             <div>
                                 <form id="amount" onChange={updateInput}>
-                                    <input type="number" min="0.00" max="10000.00" step="0.01" defaultValue="1.00" id="sub_entry">
-
+                                    <input type="number" min="0.00" max="10000.00" step="0.01" defaultValue="1.00" id="sub_entry" name="amount">
                                     </input>
                                 </form>
                             </div>
@@ -91,7 +88,7 @@ const App = () => {
                             <p id="logsSubtitle"> Type </p>
                             <div>
                                 <form id="type" onChange={updateInput}>
-                                    <select id="sub_entry">
+                                    <select id="sub_entry" name="type">
                                     <option value = "Select"> Select...   
                                     </option>  
                                     <option value = "Option1"> Option1 
