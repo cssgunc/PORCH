@@ -29,7 +29,7 @@ export default function Login() {
             getDoc(docRef)
             .then((snapshot) => {
                 (snapshot.get("role") === "Volunteer") ? 
-                history.push('/') : history.push('/home'); //Change when get routes for different users
+                history.push('/volunteerDashboard') : history.push('/donorDashboard'); //Change when get routes for different users
             })
         })
         .catch((error) => {
