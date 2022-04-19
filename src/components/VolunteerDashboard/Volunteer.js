@@ -2,9 +2,9 @@ import React from 'react';
 import { useState } from "react";
 import app from '../../firebase/firebase';
 import { getAuth, onAuthStateChanged } from '@firebase/auth';
-import { doc, getFirestore, getDoc } from '@firebase/firestore';
+import { doc, getFirestore, setDoc, getDoc } from '@firebase/firestore';
 import pencil from "./pencil.svg";
-import "./DonorDashboardStyles.css";
+import "./VolunteerDashboardStyles.css";
 
 export default function Volunteer() {
 
@@ -30,15 +30,15 @@ export default function Volunteer() {
 
     return (
         <div>
-            <div id="donation">
-                <div id="donationText">
-                    <p id="donationName" className="donationTextItem">{name}</p>
-                    <p id="donationMemberType" className="donationTextItem">{role}</p>
-                    <p id="donationCommunity" className="donationTextItem">Community: {community}</p>
-                    <p id="donationNeighborhood" className="donationTextItem">Neighborhood: {neighborhood}</p>
+            <div id="volunteer">
+                <div id="volunteerText">
+                    <p id="volunteerName" className="volunteerTextItem">{name}</p>
+                    <p id="volunteerMemberType" className="volunteerTextItem">{role}</p>
+                    <p id="volunteerCommunity" className="volunteerTextItem">Community: {community}</p>
+                    <p id="volunteerNeighborhood" className="volunteerTextItem">Neighborhood: {neighborhood}</p>
                 </div>
-                <div id="donationEditField">
-                    <img id="donationEdit" src={pencil} alt="pencil icon"/>
+                <div id="volunteerEditField">
+                    <img id="volunteerEdit" src={pencil} alt="pencil icon"/>
                 </div>
             </div>
         </div>

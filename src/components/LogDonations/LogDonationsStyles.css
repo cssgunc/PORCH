@@ -26,7 +26,7 @@
 #stepsInstruction {
     margin-top: 10px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
 }
@@ -34,8 +34,8 @@
 #logsName {
     margin: 20px 0 10px 5%;
     font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 
@@ -43,7 +43,7 @@
     margin: 20px 0 10px 5%;
     font-style: normal;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 24px;
 }
 
 #logsSubtitle {
@@ -53,7 +53,7 @@
 }
 
 form {
-    width: 100%;
+    width: 95%;
     margin: 20px 0 10px 5%;
 }
 
@@ -89,6 +89,7 @@ button {
 
 #amount {
     font-size: 18px;
+    width: 100%
 }
 
 input {
@@ -108,7 +109,7 @@ td {
 }
 
 #address_dropdown {
-    width: 90%;
+    width: 95%;
     height: 36px;
     border-radius: 5px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -126,4 +127,5 @@ td {
 
 #type {
     margin-left: 0;
+    width: 100%
 }

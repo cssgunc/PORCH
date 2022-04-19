@@ -12,7 +12,12 @@ import { async } from '@firebase/util';
 
 const App = () => {
 
-    const [formData, setFormData] = useState({});
+    const [formData, setFormData] = useState({
+        date: "mm/dd/yyyy",
+        donor_address: "option1",
+        type: "option1",
+        amount: 1.00
+    });
     const [show, setShow] = useState(false);
     const [addr, setAddr] = useState("Option3");
     const [donType, setdonType] = useState("Option3");
@@ -105,13 +110,6 @@ const App = () => {
           } catch (e) {
             console.error("Error adding document: ", e);
         }
-
-        setFormData({
-            date: '',
-            donor_address: '',
-            type: '',
-            amount: '',
-            })
     }
 
     function add() {
@@ -124,8 +122,8 @@ const App = () => {
             {show ? 
             <div>
                 <form onSubmit={handleSubmit}>
-                <p id="logsName"> Log Donations </p>
-                <p id="logsTitle"> Donor's Address </p>
+                <p id="logsTitle"> Log Donations </p>
+                <p id="logsName"> Donor's Address </p>
                 <div>
                     <form>
                         <select id="address_dropdown" name="donor_address" onChange={updateAddr}>
@@ -140,7 +138,7 @@ const App = () => {
                         </select>
                     </form>
                 </div>
-                <p id="logsTitle"> Donations </p>
+                <p id="logsName"> Donations </p>
                 <table>
                     <tr>
                         <td>
@@ -174,7 +172,7 @@ const App = () => {
                 </table>
 
                 <Button id={"smallButton"} text="Add" func={add}/>
-                <p id="logsTitle"> Just Added </p>
+                <p id="logsName"> Just Added </p>
                 <div id="box">
                     <p id="address">300 Franklin St, Chapel Hill, NC 27514</p>
                     <p id="amount">3 bags</p>
