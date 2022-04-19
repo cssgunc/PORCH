@@ -10,6 +10,7 @@ import LogDonations from './components/LogDonations/LogDonations'
 
 function App() {
   return (
+    
     <main>
       <Switch>
           <Route path="/home" component={HomeComponent} exact />
@@ -19,6 +20,7 @@ function App() {
           <Route path="/logDonations" component={LogDonations} exact />
       </Switch>
     </main>
+    
   );
 }
 export default App;
