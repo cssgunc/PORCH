@@ -9,7 +9,7 @@ const App = () => {
         <div>
             <TopNavBar />
             <p id="donorTitle">Dashboard</p>
-            <div id="donationContainer"> <Donation /></div>
+            <div id="donationContainer"> <Donation /> </div>
             <div>
                 <Button id="bigButton"
                         text="Donate"

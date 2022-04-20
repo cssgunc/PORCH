@@ -49,6 +49,30 @@
 #newDonate {
     margin: 10px 5%;
     width: 90%;
+    background-color: #A9B638;
+    text-align: left;
+    font-weight: 600;
+    font-size: 22px;
+    color: #444444;
+}
+
+#Donation-Heart {
+    float: right;
+}
+
+#pickDate {
+    font-weight: 500;
+}
+
+#newDonationContainer {
+    margin: 20px 0 10px 5%;
+}
+#pickUpDate {
+    margin-top: 10px;
+}
+#submitNewDonate {
+    margin-top: 20px;
+    width: 100px;
     height: 82px;
     background: #A9B638;
     border-style: none;
