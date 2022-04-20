@@ -1,0 +1,131 @@
+#steps {
+    background-color: #F1EBD9;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+}
+
+#stepsText {
+    display: inline-block;
+}
+
+#stepsName {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.stepsTextItem {
+    padding: 0;
+    margin: 0 0 2px 0;
+}
+
+#stepsInstruction {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+#logsName {
+    margin: 20px 0 10px 5%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+#logsTitle {
+    margin: 20px 0 10px 5%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#logsSubtitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+form {
+    width: 95%;
+    margin: 20px 0 10px 5%;
+}
+
+button {
+    padding: 4px 25px;
+    font-size: 18px;
+    background-color: #A9B638;
+    box-sizing: border-box;
+    border: 3px solid #FFFFFF;
+    border-radius: 20px;
+    margin-left: 5%;
+}
+
+#pick-up-date {
+    width: 90%;
+    margin-left: 5%;
+}
+
+#address {
+    font-weight: 625;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+#box {
+    background-color: #F1EBD9;
+    border: black 3px;
+    width: 90%;
+    padding: 15px;
+    border-radius: 25px;
+    margin-left: 5%;
+}
+
+#amount {
+    font-size: 18px;
+    width: 100%
+}
+
+input {
+    border-radius: 10px;
+    border-color:black;
+    padding: 5px 10px;
+}
+
+table {
+    table-layout: fixed ;
+    width: 100%;
+}
+
+td {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#address_dropdown {
+    width: 95%;
+    height: 36px;
+    border-radius: 5px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#sub_entry {
+    height: 62px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#amount {
+    margin-left: 0;
+}
+
+#type {
+    margin-left: 0;
+    width: 100%
+}
