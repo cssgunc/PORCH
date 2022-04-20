@@ -46,11 +46,11 @@ export default function Signup() {
             const user = UserCredential.user;
             (role === "Volunteer") ?
                 (setDoc(doc(collection(db, "users"), user.uid), {
-                    name: name, role: role, community: community, neighborhood: neighborhood,
+                    email: email, name: name, role: role, community: community, neighborhood: neighborhood,
                     historyAdded: { neighborhoodName: [], donations: [] }
                 })) :
                 (setDoc(doc(collection(db, "users"), user.uid), {
-                    name: name, role: role, community: community, neighborhood: neighborhood,
+                    email: email, name: name, role: role, community: community, neighborhood: neighborhood,
                     address: donorAddress
                 }))
         })

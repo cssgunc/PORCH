@@ -5,7 +5,6 @@
 }
 
 #settingsContainer {
-    background-color: #F1EBD9;
     width: 90%;
     padding: 10px;
     border-radius: 10px;
@@ -19,7 +18,14 @@
 }
 
 .settingsInput {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    background-color: antiquewhite;
+    border-color: antiquewhite;
+    border-radius: 7px;
+}
+form:focus
+{
+    background-color:yellow;
 }
 #buttonContainer {
     width: 140px;
